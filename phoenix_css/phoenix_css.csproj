@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAC67808-A015-4D7A-83D7-7D46F5A662B4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix</RootNamespace>
+    <AssemblyName>phoenix_css</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Phoenix.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX">
+      <HintPath>..\..\BlyadleField\BlyadleField\bin\x64\Debug\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1">
+      <HintPath>..\..\BlyadleField\BlyadleField\bin\x64\Debug\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>..\..\BlyadleField\BlyadleField\bin\x64\Debug\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandSystem\Command.cs" />
+    <Compile Include="CommandSystem\CommandHandler.cs" />
+    <Compile Include="CommandSystem\CommandParameter.cs" />
+    <Compile Include="CommandSystem\CommandParameterValue.cs" />
+    <Compile Include="ConsoleSystem\Console.cs" />
+    <Compile Include="ConsoleSystem\ConsoleColor.cs" />
+    <Compile Include="CounterStrike\BaseClient.cs" />
+    <Compile Include="CounterStrike\BSP\BspFile.cs" />
+    <Compile Include="CounterStrike\BSP\Enums\ContentsFlag.cs" />
+    <Compile Include="CounterStrike\BSP\Enums\LumpType.cs" />
+    <Compile Include="CounterStrike\BSP\Enums\SurfFlag.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Brush.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Brushside.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Face.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Header.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Leaf.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Lump.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Node.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Plane.cs" />
+    <Compile Include="CounterStrike\BSP\Structs\Surface.cs" />
+    <Compile Include="CounterStrike\BSP\UtilityReader.cs" />
+    <Compile Include="CounterStrike\EngineClient.cs" />
+    <Compile Include="CounterStrike\EntityBase.cs" />
+    <Compile Include="CounterStrike\EntityList.cs" />
+    <Compile Include="CounterStrike\Enums\ClassId.cs" />
+    <Compile Include="CounterStrike\Enums\LifeState.cs" />
+    <Compile Include="CounterStrike\Enums\PlayerFlag.cs" />
+    <Compile Include="CounterStrike\Enums\SendPropType.cs" />
+    <Compile Include="CounterStrike\Enums\Team.cs" />
+    <Compile Include="CounterStrike\Models\BaseEntity.cs" />
+    <Compile Include="CounterStrike\Models\BasePlayer.cs" />
+    <Compile Include="CounterStrike\Models\BaseWeapon.cs" />
+    <Compile Include="CounterStrike\NetvarManager.cs" />
+    <Compile Include="CounterStrike\Structs\BaseBone.cs" />
+    <Compile Include="CounterStrike\Structs\ClientClass.cs" />
+    <Compile Include="CounterStrike\Structs\GlobalVars.cs" />
+    <Compile Include="CounterStrike\Structs\GlowObject.cs" />
+    <Compile Include="CounterStrike\Structs\Input.cs" />
+    <Compile Include="CounterStrike\Structs\Ray.cs" />
+    <Compile Include="CounterStrike\Structs\RecvProp.cs" />
+    <Compile Include="CounterStrike\Structs\RecvTable.cs" />
+    <Compile Include="CounterStrike\Structs\Trace.cs" />
+    <Compile Include="CounterStrike\Structs\TraceFilter.cs" />
+    <Compile Include="CounterStrike\Structs\UserCmd.cs" />
+    <Compile Include="CounterStrike\Structs\VerifiedUserCmd.cs" />
+    <Compile Include="Features\ESP.cs" />
+    <Compile Include="Features\Misc.cs" />
+    <Compile Include="Features\SoundESP.cs" />
+    <Compile Include="MemorySystem\PatternScan.cs" />
+    <Compile Include="MemorySystem\Enums\ScanMethod.cs" />
+    <Compile Include="Overlay\Direct2DRenderer.cs" />
+    <Compile Include="Overlay\LayoutBuffer.cs" />
+    <Compile Include="Overlay\Native.cs" />
+    <Compile Include="Overlay\OverlayWindow.cs" />
+    <Compile Include="Overlay\WindowConstants.cs" />
+    <Compile Include="Phoenix\Structs\RECT.cs" />
+    <Compile Include="Phoenix\Structs\Vector2D.cs" />
+    <Compile Include="Phoenix\Structs\Vector3D.cs" />
+    <Compile Include="CounterStrike\Structs\ViewMatrix.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Features\Aimbot.cs" />
+    <Compile Include="MemorySystem\Native\Enums\AllocationType.cs" />
+    <Compile Include="MemorySystem\Native\Enums\CreationFlags.cs" />
+    <Compile Include="MemorySystem\Native\Enums\FreeType.cs" />
+    <Compile Include="MemorySystem\Native\Enums\MemoryProtection.cs" />
+    <Compile Include="MemorySystem\Native\Enums\ProcessAccessFlags.cs" />
+    <Compile Include="MemorySystem\Native\Library\Kernel32.cs" />
+    <Compile Include="MemorySystem\Native\Structs\MemoryBasicInformation.cs" />
+    <Compile Include="MemorySystem\ProcessMemory.cs" />
+    <Compile Include="MemorySystem\RemoteAllocation.cs" />
+    <Compile Include="MemorySystem\RemoteFunction.cs" />
+    <Compile Include="MemorySystem\SignatureManager.cs" />
+    <Compile Include="MemorySystem\TypeCache.cs" />
+    <Compile Include="Phoenix\NativeMethods.cs" />
+    <Compile Include="Phoenix\Phoenix.cs" />
+    <Compile Include="Phoenix\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreadingSystem\ThreadFunction.cs" />
+    <Compile Include="ThreadingSystem\ThreadManager.cs" />
+    <Compile Include="Phoenix\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
